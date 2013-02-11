@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+    <title>indexedDB Test</title>
+    <script type="text/javascript" src="indexeddb.js"></script>
+</head>
+<body>
+
+    <h2>Saisie d'un véhicule</h2>
+    <form onsubmit="saveRecord(this); return false" id="voitureform">
+        <p>
+            <label> Modèle <input type="text" name="model" /> </label>
+        </p>
+        <p>
+            <label> Constructeur <input type="text" name="maker" /> </label>
+        </p>
+        <p>
+            <label> Année <input type="text" name="year" /></label>
+        </p>
+        <p><input type="submit" value="ajouter" /></p>
+    </form>
+    
+    <h2>Liste des véhicules</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Modèle</th>
+                <th>Constructeur</th>
+                <th>Annéee</th>
+            </tr>
+        </thead>
+        <tbody id="listvehicule">
+            
+        </tbody>
+    </table>
+    <p><button onclick="deleteAllRecords()">Tout effacer</button></p>
+    
+</body>
+</html>
